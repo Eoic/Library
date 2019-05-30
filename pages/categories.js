@@ -5,7 +5,7 @@ class Categories extends Component {
     render() {
         return (
             <Layout>
-                <main className="sidebar-content">
+                <main className="sidebar-content has-navbar">
                     <div className='container bg-white'>
                         Categories
                     </div>
