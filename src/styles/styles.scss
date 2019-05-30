@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 $font-size: 50px;
 $transition-time: 0.2s;
 $sidebar-width: 180px;
 $sidebar-padding: 25px;
-$navbar-height: 45px;
+$navbar-height: 50px;
 $colors: (
   "white": #f7f4f3,
   "blue": #4464ad,
@@ -18,7 +18,7 @@ $colors: (
 html,
 body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -78,7 +78,11 @@ body {
 }
 
 .btn-active {
-  filter: brightness(80%);
+  filter: brightness(85%);
+}
+
+.btn-inv {
+  background: transparent;
 }
 
 .btn-blue {
@@ -113,9 +117,11 @@ body {
 // Navigation
 nav {
   box-sizing: border-box;
-  padding: 12px;
+  padding: 13px;
   width: 100%;
   height: $navbar-height;
+  position: fixed;
+  top: 0;
 }
 
 .nav-list {
@@ -131,7 +137,7 @@ nav {
 .nav-list a {
   padding: 5px;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 // Positioning
@@ -154,7 +160,6 @@ nav {
   left: 0;
   float: left;
   height: 100%;
-  //z-inz-index: -1;
   position: fixed;
   padding: 0 $sidebar-padding;
   width: $sidebar-width;
@@ -165,10 +170,14 @@ nav {
   margin-left: $sidebar-width + ($sidebar-padding * 2);
 }
 
+.has-navbar {
+  margin-top: $navbar-height;
+}
+
 // Containers
 .container {
   padding: 15px;
-} 
+}
 
 .flexible {
   display: flex;
@@ -179,7 +188,7 @@ nav {
   width: 100%;
 }
 
-// Other 
+// Other
 .divider {
   border-style: none;
   border-top: 1px solid #b6b6b6;
@@ -192,4 +201,20 @@ nav {
 
 .w-fixed {
   min-width: 25px;
+}
+
+// Specific
+.book-wrapper {
+  @extend .round, .bg-green;
+  padding: 20px;
+  width: 145px;
+  height: 245px;
+}
+
+.books-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: center;
+  justify-items: center;
 }
