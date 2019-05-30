@@ -1,12 +1,12 @@
-import React from 'react'
-import '../src/styles/styles.scss'
-import Navbar from '../components/Navbar';
+import React from 'react';
+import Layout from '../Layouts/Main';
 
-const Index = () => (
-  <div>
-    <Navbar />
-    <p className="example"> Index page </p>
-  </div>
-)
-
-export default Index;
+export default () => (
+  <Layout>
+    <main className="sidebar-content">
+      <div className='container bg-white'>
+        <p> Index page </p>
+      </div>
+    </main>
+  </Layout>
+);

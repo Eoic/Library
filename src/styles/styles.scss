@@ -1,5 +1,195 @@
-$font-size: 50px;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-.example {
-    font-size: $font-size;
+$font-size: 50px;
+$transition-time: 0.2s;
+$sidebar-width: 180px;
+$sidebar-padding: 25px;
+$navbar-height: 45px;
+$colors: (
+  "white": #f7f4f3,
+  "blue": #4464ad,
+  "green": #4fb477,
+  "orange": #ed7d3a,
+  "red": #db4c40,
+  "grey": #565453,
+  "dark": #444140
+);
+
+html,
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+// Colors;
+.bg-white {
+  background-color: map-get($map: $colors, $key: "white");
+}
+
+.bg-blue {
+  background-color: map-get($map: $colors, $key: "blue");
+}
+
+.bg-green {
+  background-color: map-get($map: $colors, $key: "green");
+}
+
+.bg-orange {
+  background-color: map-get($map: $colors, $key: "orange");
+}
+
+.bg-red {
+  background-color: map-get($map: $colors, $key: "red");
+}
+
+.bg-dark {
+  background-color: map-get($map: $colors, $key: "dark");
+}
+
+.text-dark {
+  color: map-get($map: $colors, $key: "dark");
+}
+
+.text-grey {
+  color: map-get($map: $colors, $key: "grey");
+}
+
+// Buttons
+.btn {
+  @extend .bg-white;
+  padding: 8px;
+  border-style: none;
+  transition: all $transition-time;
+  font-size: 14pt;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.btn:active {
+  filter: brightness(80%);
+}
+
+.btn-active {
+  filter: brightness(80%);
+}
+
+.btn-blue {
+  @extend .bg-blue;
+  color: map-get($map: $colors, $key: "white");
+}
+
+.btn-green {
+  @extend .bg-green;
+  color: map-get($map: $colors, $key: "white");
+}
+
+.btn-orange {
+  @extend .bg-orange;
+  color: map-get($map: $colors, $key: "white");
+}
+
+.btn-red {
+  @extend .bg-red;
+  color: map-get($map: $colors, $key: "white");
+}
+
+.btn-dark {
+  @extend .bg-dark;
+  color: map-get($map: $colors, $key: "white");
+}
+
+.round {
+  border-radius: 2px;
+}
+
+// Navigation
+nav {
+  box-sizing: border-box;
+  padding: 12px;
+  width: 100%;
+  height: $navbar-height;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline;
+}
+
+.nav-list a {
+  padding: 5px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+// Positioning
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+// Sidebars
+.sidebar {
+  top: 0;
+  left: 0;
+  float: left;
+  height: 100%;
+  //z-inz-index: -1;
+  position: fixed;
+  padding: 0 $sidebar-padding;
+  width: $sidebar-width;
+  margin-top: $navbar-height;
+}
+
+.sidebar-content {
+  margin-left: $sidebar-width + ($sidebar-padding * 2);
+}
+
+// Containers
+.container {
+  padding: 15px;
+} 
+
+.flexible {
+  display: flex;
+}
+
+// Sized
+.w-100 {
+  width: 100%;
+}
+
+// Other 
+.divider {
+  border-style: none;
+  border-top: 1px solid #b6b6b6;
+}
+
+.btn-link {
+  @extend .text-dark;
+  text-decoration: none;
+}
+
+.w-fixed {
+  min-width: 25px;
 }
