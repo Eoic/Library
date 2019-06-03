@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Upload from './Books/Upload';
 
 const Links = [
 	{
@@ -36,9 +37,7 @@ class Sidebar extends Component {
 					})}
 				</section>
 				<hr className='divider'></hr>
-				<button className='w-100 round center btn btn-green'>
-					<i className='fa fa-book'></i> Add books
-        		</button>
+				<Upload/>
 				<script src='/static/active-button.js'></script>
 			</aside>
 		);

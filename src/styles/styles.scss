@@ -11,6 +11,7 @@ $colors: (
   "green": #4fb477,
   "orange": #ed7d3a,
   "red": #db4c40,
+  "light-grey": #a8a3a1,
   "grey": #565453,
   "dark": #444140
 );
@@ -126,6 +127,8 @@ nav {
   height: $navbar-height;
   position: fixed;
   top: 0;
+  z-index: 1;
+  //box-shadow: 0px 2px 4px 0px #4fb477;
 }
 
 .nav-list {
@@ -237,19 +240,26 @@ nav {
 
 .search-input {
   @extend .text-grey;
-  padding: 12px;
+  padding: 10px;
   font-size: 150%;
-  border: 2px solid #4464ad;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-style: none;
+  border: 2px solid map-get($map: $colors, $key: "green");
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   min-width: 100px;
   width: 550px;
+  box-shadow: 2px 2px 0px 0px map-get($map: $colors, $key: "green");
+}
+
+.search-input::placeholder {
+  color: map-get($map: $colors, $key: "light-grey");
 }
 
 .input-extension {
-  @extend .bg-blue, .text-white;
+  @extend .bg-green, .text-white;
   padding: 10px;
-  border: 2px solid #4464ad;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border: 2 px solid map-get($map: $colors, $key: "green");
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 2px 2px 0px 0px rgb(78, 180, 119);
 }
