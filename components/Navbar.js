@@ -12,6 +12,14 @@ const Navbar = () => (
           </a>
         </Link>
       </li>
+
+      <li className='float-right'>
+        <Link href='/profile'>
+          <a>
+            <img className='profile-thumbnail' src='./static/profile.png'></img>
+          </a>
+        </Link>
+      </li>
     </ul>
   </nav>
 );

@@ -119,6 +119,10 @@ body {
   border-radius: 2px;
 }
 
+.full-round {
+  border-radius: 50%;
+}
+
 // Navigation
 nav {
   box-sizing: border-box;
@@ -262,4 +266,39 @@ nav {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   box-shadow: 2px 2px 0px 0px rgb(78, 180, 119);
+}
+
+.profile-thumbnail {
+  @extend .full-round;
+  width: 25px; 
+  height: 25px;
+}
+
+// Alert
+.alert {
+  width: 450px;
+  background-color: #ffffff;
+  z-index: 1000;
+  position: fixed;
+  left: calc(50% - 225px);
+  top: 0;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.alert-default {
+  @extend .bg-white;
+  color: #444140;
+}
+
+.alert-info {
+  @extend .bg-blue;
+}
+
+.alert-success {
+  border: 2px solid #4fb477;
+}
+
+.alert-danger {
+  @extend .bg-red;
 }

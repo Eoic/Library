@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 
 const Upload = () => {
     const [uploadPercentage, setUploadPercentage] = useState(0);
+    const fileInput = useRef();
 
     const onChange = async event => {
         const formData = new FormData();
@@ -22,8 +23,18 @@ const Upload = () => {
         }
     }
 
+    const onClick = _ => {
+        fileInput.current.click();
+    }
+
     return (
-        <input type='file' name='file' className='w-100 round center btn btn-green' onChange={onChange} />
+        <>
+            <button onClick={onClick} className='w-100 round center btn btn-green'> 
+                <i className='w-fixed fas fa-book'></i>
+                Add book 
+            </button>
+            <input ref={fileInput} type='file' name='file' onChange={onChange} hidden />
+        </>
     );
 }
 
