@@ -29,9 +29,8 @@ const Upload = () => {
 
     return (
         <>
-            <button onClick={onClick} className='w-100 round center btn btn-green'> 
-                <i className='w-fixed fas fa-book'></i>
-                Add book 
+            <button className='w-100 center btn btn-green round text-left' onClick={onClick}>
+                <i className={'w-fixed fas fa-book'}></i> Add books
             </button>
             <input ref={fileInput} type='file' name='file' onChange={onChange} hidden />
         </>

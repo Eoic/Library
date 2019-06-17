@@ -29,13 +29,8 @@ class Sidebar extends Component {
 		return (
 			<aside className='sidebar bg-white'>
 				<section id='sidebar-items'>
-					<div style={{ display: 'flex', justifyContent: 'spaceBetween' }}>
-						<p className='text-grey' style={{flex: "0 0 50%" }}> Browse </p>
-						<button className='btn round float-right' style={{ flex: "0 0 50%"}}>
-							<i className='fas fa-bars w-fixed'></i>
-						</button>
-					</div>
-
+					<p className='text-grey' style={{flex: "0 0 50%" }}> Browse </p>
+					
 					{/* Menu links */}
 					{Links.map((link, index) => {
 						return (<a href={link.href} className='w-100 center btn btn-link round' key={index}>

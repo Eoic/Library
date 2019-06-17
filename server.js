@@ -25,7 +25,7 @@ app.prepare().then(() => {
             }
 
             console.log('Upload successful.');
-            return res.json({ fileName: file.name, filePath: `/uploads/${file.name}` })
+            return res.json({ fileName: file.name, filePath: `/uploads/${file.name}`, message: 'Upload successful.' })
         });
 
     });

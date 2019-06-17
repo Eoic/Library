@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Layout from '../Layouts/Main';
 
 class Categories extends Component {
     render() {
         return (
-            <Layout>
-                <main className="sidebar-content has-navbar">
-                    <div className='container bg-white'>
-                        Categories
-                    </div>
-                </main>
-            </Layout>
+            <main className="sidebar-content has-navbar">
+                <div className='container bg-white'>
+                    Categories
+                </div>
+            </main>
         );
     }
 }
